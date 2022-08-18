@@ -1,4 +1,62 @@
+@import "./variables.scss";
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+@media only screen and (min-width:$Mobile) and (max-width:$Desktop){
+    .cards-container{
+        max-width: $width_mobile;
+        width: $width_mobile;
+
+        background-image: url("../../images/bg-main-mobile.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: max($height_background_image,20vh + 10vw);
+        &-front-card{
+            position: relative;
+            transform: translatey(20.5vh);
+            
+            position: relative;
+            
+            left: 5vw;
+            object-fit: cover;
+            width: max($front_image_width,80vw);
+            
+            max-width: 512px;
+            height: 180px;
+            z-index: 3;
+            &-img{
+                width: 100%;
+                height: 100%;
+                
+            }
+
+        }
+
+        &-back-card{
+            position: relative;
+            transform: translatey(-20.5vh);
+            object-fit: cover;
+            width: max($back_image_width,80vw);
+            
+            max-width: 200px;
+            height: 180px;
+            &-img{
+                width: 100%;
+                height: 100%;
+                
+            }
+        }
+    }
+
+    span{
+        color:red;
+    }
+
+    // @media only screen and() {
+        
+    // }
+
+
+} 
