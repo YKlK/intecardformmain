@@ -17,64 +17,93 @@
     position: relative;
     transform: translatey(calc(310px - 68%));
     position: relative;
-    left: 5vw;
+    left: 4vw;
     object-fit: cover;
     width: max(312.9px, 80vw);
-    max-width: 512px;
-    height: 180px;
+    max-width: 386px;
+    height: 200px;
     z-index: 3;
   }
   .cards-container-front-card-img {
     width: 100%;
     height: 100%;
   }
+  .cards-container-front-card-svg {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+  }
+  .cards-container-front-card-card-number {
+    font-variant: small-caps;
+    position: absolute;
+    top: 120px;
+    width: 100%;
+    text-align: center;
+    color: hsl(0deg, 0%, 100%);
+    font-family: "Space Grotesk";
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 5px;
+    word-spacing: 10px;
+  }
+  .cards-container-front-card-name {
+    font-variant: small-caps;
+    color: hsl(0deg, 0%, 100%);
+    position: absolute;
+    top: 160px;
+    left: 45px;
+  }
+  .cards-container-front-card-month {
+    font-variant: small-caps;
+    color: hsl(0deg, 0%, 100%);
+    position: absolute;
+    top: 160px;
+    left: 80%;
+  }
   .cards-container-back-card {
     position: relative;
-    transform: translateY(-94px);
+    transform: translateY(-139px);
     object-fit: cover;
-    width: max(447px, 80vw);
-    left: 11vw;
-    max-width: 512px;
-    height: 180px;
+    width: max(312.9px, 80vw);
+    left: 13vw;
+    max-width: 386px;
+    height: 200px;
   }
   .cards-container-back-card-img {
     width: 100%;
     height: 100%;
   }
-  span {
-    color: red;
-  }
 }
 @media only screen and (min-width: 375px) and (max-width: 1440px) and (min-width: 680px) {
   .cards-container-back-card {
-    left: 21vw;
+    left: 22vw;
   }
   .cards-container-front-card {
-    left: 12vw;
+    left: 13vw;
   }
 }
 @media only screen and (min-width: 375px) and (max-width: 1440px) and (min-width: 860px) {
   .cards-container-back-card {
-    left: 23vw;
+    left: 25vw;
   }
   .cards-container-front-card {
-    left: 16vw;
+    left: 18vw;
   }
 }
 @media only screen and (min-width: 375px) and (max-width: 1440px) and (min-width: 1050px) {
   .cards-container-back-card {
-    left: 27vw;
+    left: 29vw;
   }
   .cards-container-front-card {
-    left: 20vw;
+    left: 22vw;
   }
 }
 @media only screen and (min-width: 375px) and (max-width: 1440px) and (min-width: 1350px) {
   .cards-container-back-card {
-    left: 30vw;
+    left: 32vw;
   }
   .cards-container-front-card {
-    left: 25vw;
+    left: 27vw;
   }
 }
 
