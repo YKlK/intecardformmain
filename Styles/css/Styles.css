@@ -11,11 +11,11 @@
     background-image: url("../../images/bg-main-mobile.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: max(310px, 20vh + 10vw);
+    height: 310px;
   }
   .cards-container-front-card {
     position: relative;
-    transform: translatey(20.5vh);
+    transform: translatey(calc(310px - 68%));
     position: relative;
     left: 5vw;
     object-fit: cover;
@@ -30,10 +30,11 @@
   }
   .cards-container-back-card {
     position: relative;
-    transform: translatey(-20.5vh);
+    transform: translateY(-94px);
     object-fit: cover;
     width: max(447px, 80vw);
-    max-width: 200px;
+    left: 11vw;
+    max-width: 512px;
     height: 180px;
   }
   .cards-container-back-card-img {
@@ -42,6 +43,38 @@
   }
   span {
     color: red;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 1440px) and (min-width: 680px) {
+  .cards-container-back-card {
+    left: 21vw;
+  }
+  .cards-container-front-card {
+    left: 12vw;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 1440px) and (min-width: 860px) {
+  .cards-container-back-card {
+    left: 23vw;
+  }
+  .cards-container-front-card {
+    left: 16vw;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 1440px) and (min-width: 1050px) {
+  .cards-container-back-card {
+    left: 27vw;
+  }
+  .cards-container-front-card {
+    left: 20vw;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 1440px) and (min-width: 1350px) {
+  .cards-container-back-card {
+    left: 30vw;
+  }
+  .cards-container-front-card {
+    left: 25vw;
   }
 }
 
