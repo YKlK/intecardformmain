@@ -1,3 +1,23 @@
+.divposicion {
+  position: relative;
+}
+
+.iconposicion {
+  position: absolute;
+  left: 95%;
+  top: 25px;
+}
+
+.exepcion {
+  color: red;
+  outline: 1px solid red;
+}
+
+.correcto {
+  color: blue;
+  outline: 1px solid blue;
+}
+
 html {
   max-width: 1440px;
   display: flex;
@@ -11,6 +31,7 @@ html {
 html, body {
   max-width: 100%;
   overflow-x: hidden;
+  margin: 0 auto;
 }
 
 * {
@@ -110,6 +131,7 @@ html, body {
     font-size: 20px;
   }
   .form-Name {
+    font-size: 15px;
     width: 90vw;
     height: 50px;
     border-radius: 7px;
@@ -124,6 +146,7 @@ html, body {
     text-align: center;
   }
   .form-Number {
+    font-size: 15px;
     width: 90vw;
     height: 50px;
     border-radius: 7px;
@@ -138,6 +161,7 @@ html, body {
     text-align: center;
   }
   .form-MM {
+    font-size: 15px;
     width: 22%;
     height: 50px;
     border-radius: 7px;
@@ -152,6 +176,7 @@ html, body {
     text-align: center;
   }
   .form-YY {
+    font-size: 15px;
     width: 22%;
     height: 50px;
     border-radius: 7px;
@@ -166,6 +191,7 @@ html, body {
     text-align: center;
   }
   .form-CVC {
+    font-size: 15px;
     width: 50%;
     height: 50px;
     border-radius: 7px;
