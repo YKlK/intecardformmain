@@ -33,28 +33,42 @@
 
 
   <form action="#" id="form" class="form" method="post">
-    <label for="Name"> Cardholder Name </label>
+    <label for="form_Name"> Cardholder Name </label>
+    
+    
     <div class="divposicion">
     <input id="form_name" type="text" class="form-Name" name="name" placeholder="e.g. Jane Appleseed">
-    <i id="name_icon" class="bi bi-check-circle iconposicion"></i>
+    <i id="name_icon" class="bi bi-circle iconposicion"></i>
     </div>
 
-
-
-
-
-
-
     <label for="Number">Card Number</label>
-    <input id="form_number" type="password" maxlength="20"  class="form-Number" name="number"  placeholder="e.g. 1234 5678 9123 0000">
+    
+    <div class="divposicion">
+      <input id="form_number" type="password" maxlength="20"  class="form-Number" name="number"  placeholder="e.g. 1234 5678 9123 0000">
+      <i id="number_icon" class="bi bi-circle iconposicion"></i>
+    </div>
+    
     <div>
       <label for="">Exp. Date (MM/YY)</label>
       <label style="float: right; padding-right: 20px;" for="CVC">CVC</label>
     </div>
+
     <div>
+      <span class="divposicion">
       <input id="form_month" type="number" class="form-MM" min="1" max="12" placeholder="MM" name="month">
-      <input id="form_year" type="number" class="form-YY" min="1900" max="2100" placeholder="YY" name="year">
-      <input name="CVC" type="password" class="form-CVC" id="form-CVC" placeholder="e.g. 123">
+      <i id="month_icon" class="bi bi-circle iconposicion"></i>
+      </span>
+
+      <span class="divposicion">
+        <input id="form_year" type="number" class="form-YY" min="1980" max="2050" placeholder="YY" name="year">
+        <i id="year_icon" class="bi bi-circle iconposicion"></i>
+      </span>
+
+      <span class="divposicion">
+      <input name="CVC" type="password" class="form-CVC" id="form_CVC" placeholder="e.g. 123">
+      <i id="CVC_icon" class="bi bi-circle iconposicion"></i>
+      </span>
+
     </div>
     
 

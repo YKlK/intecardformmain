@@ -1,10 +1,11 @@
 .divposicion {
+  display: inline-block;
   position: relative;
 }
 
 .iconposicion {
   position: absolute;
-  left: 95%;
+  right: 7%;
   top: 25px;
 }
 
@@ -162,7 +163,7 @@ html, body {
   }
   .form-MM {
     font-size: 15px;
-    width: 22%;
+    width: 22vw;
     height: 50px;
     border-radius: 7px;
     -moz-appearance: textfield;
@@ -177,7 +178,7 @@ html, body {
   }
   .form-YY {
     font-size: 15px;
-    width: 22%;
+    width: 22vw;
     height: 50px;
     border-radius: 7px;
     -moz-appearance: textfield;
@@ -192,7 +193,7 @@ html, body {
   }
   .form-CVC {
     font-size: 15px;
-    width: 50%;
+    width: 44.7vw;
     height: 50px;
     border-radius: 7px;
     -moz-appearance: textfield;

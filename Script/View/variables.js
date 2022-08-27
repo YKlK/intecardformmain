@@ -15,8 +15,8 @@ export let send = document.getElementById("send");
 
 export const Reg={
     Name_holder : /^[a-zA-Z\s]+$/,
-    Number : "/^([0-9]{4}\s){4}/",
-    Month : "/\d{2}/",
-    Year : "/\d{4}/",
-    CVC : "/\d{3}/"
+    Number : /[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}/,
+    Month : /^([1-9]|1[0-2])$/,
+    Year : /\b(19[89][0-9]|20[0-4][0-9]|2050)\b/,
+    CVC : /\d\d\d?/
 }

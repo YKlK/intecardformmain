@@ -1,8 +1,9 @@
 // @import url(https://fonts.google.com/specimen/Space+Grotesk);
 @import "./variables.scss";
-@mixin posicionIcon($left,$top){
+@mixin posicionIcon($right,$top){
     position: absolute;
-    left: $left;
+    right: $right;
+    
     top:$top;
 }
 
@@ -14,11 +15,12 @@
     
 }
 .divposicion{
+    display: inline-block;
     position: relative;
 }
 .iconposicion{
     
-    @include posicionIcon(95%,25px)
+    @include posicionIcon(7%,25px)
 }
 
 .exepcion{
@@ -193,16 +195,16 @@ html, body {
         }
 
         &-MM{
-            @include inpts(22%);
+            @include inpts(22vw);
             
         }
         &-YY{
             
-            @include inpts(22%);
+            @include inpts(22vw);
         }
         &-CVC{
           
-            @include inpts(50%);
+            @include inpts(44.7vw);
            
         }
     }
