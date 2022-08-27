@@ -1,4 +1,6 @@
 "use strict"
+
+
 //card-container-front
 export let card_number = document.getElementById("number");
 export let card_name = document.getElementById("name");
@@ -19,4 +21,12 @@ export const Reg={
     Month : /^([1-9]|1[0-2])$/,
     Year : /\b(19[89][0-9]|20[0-4][0-9]|2050)\b/,
     CVC : /\d\d\d?/
+}
+
+export const form_validados={
+    name: false,
+    number: false,
+    month: false,
+    year: false,
+    CVC: false
 }

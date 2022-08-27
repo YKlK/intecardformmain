@@ -15,3 +15,6 @@ form_input.forEach(every=>{
     //    form_input[0].value.test(Reg.Name_holder)
     })
 })
+
+
+// theForm.addEventListener("submit",)
