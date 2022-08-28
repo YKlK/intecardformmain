@@ -13,6 +13,9 @@ export let theForm = document.getElementById("form");
 export let form_input = document.querySelectorAll("#form input")
 export let send = document.getElementById("send");
 
+//complete
+export let completed = document.getElementById("Completed")
+
 //REGEXP
 
 export const Reg={

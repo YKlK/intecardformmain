@@ -1,5 +1,5 @@
 
- import {Reg , form_input ,form_validados} from "../View/variables.js"
+ import {Reg , form_input ,form_validados , card_number , card_name , card_month_year , card_CVC} from "../View/variables.js"
 
 //esta funcion le paso uno de los valores de reg y el nombre del input
 export function receptor_Reg_value(val,form){
@@ -47,7 +47,23 @@ export const validarDato =(event)=>{
 };
 
 export const Validar_Datos_formulario_final=(event)=>{
-    
+    event.preventDefault();
+    if (form_validados.name && form_validados.number && form_validados.month && form_validados.year && form_validados.CVC ){
+
+        
+
+        card_number.textContent = form_input[1].value;
+        card_name.textContent = form_input[0].value;
+        card_month_year.textContent = `${form_input[2].value}/${form_input[3].value}`;
+        card_CVC.textContent = form_input[4].value;
+
+
+        
+    }
+    else{
+        alert("formulario incompleto");
+    }
     
 
 }
+
