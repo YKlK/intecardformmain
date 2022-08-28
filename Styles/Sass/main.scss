@@ -221,9 +221,7 @@ html, body {
             background-color: $Very_light_violet;
         }
     }
-    .hidden{
-        display: none;
-    }
+    
 
     .completed{
         margin-top: 80px;
@@ -273,5 +271,7 @@ html, body {
     @include layout(1050px,29vw,22vw);
     @include layout(1350px,32vw,27vw);
     
-
+    .hidden{
+        display: none;
+    }
 }

@@ -15,7 +15,7 @@ export let send = document.getElementById("send");
 
 //complete
 export let completed = document.getElementById("Completed")
-
+export let ultimopaso = document.getElementById("ultimopaso")
 //REGEXP
 
 export const Reg={

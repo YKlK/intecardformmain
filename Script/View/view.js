@@ -1,6 +1,6 @@
 "use strict"
-import {theForm, card_number, card_name, card_month_year,card_CVC,form_input ,send, Reg} from "./variables.js"
- import {validarDato , Validar_Datos_formulario_final} from "../controller/controller.js"
+import {theForm, card_number, card_name, card_month_year,card_CVC,form_input , Reg ,completed,ultimopaso} from "./variables.js"
+ import {validarDato , Validar_Datos_formulario_final,retornar} from "../controller/controller.js"
 
 // theForm.addEventListener("submit" , )
 
@@ -10,11 +10,12 @@ import {theForm, card_number, card_name, card_month_year,card_CVC,form_input ,se
 form_input.forEach(every=>{
     every.addEventListener("keyup",validarDato
     )
-    // every.addEventListener("blur",()=>{
-    //     console.log("si")
-    //    form_input[0].value.test(Reg.Name_holder)
+    // every.addEventListener("blur",(eve)=>{
+    //     console.log(eve)
+      
     // })
 })
 
 
 theForm.addEventListener("submit",Validar_Datos_formulario_final)
+completed.addEventListener("click",retornar)

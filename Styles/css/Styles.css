@@ -217,9 +217,6 @@ html, body {
   .buttonto:hover {
     background-color: hsl(278deg, 40%, 30%);
   }
-  .hidden {
-    display: none;
-  }
   .completed {
     margin-top: 80px;
     display: flex;
@@ -290,6 +287,11 @@ html, body {
   }
   .cards-container-front-card {
     left: 27vw;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 1440px) {
+  .hidden {
+    display: none;
   }
 }
 
