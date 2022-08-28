@@ -58,27 +58,149 @@
         
     }
 }
-html{
-    max-width: $Desktop;
-    display: flex;
-    height: 100vh;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    width: fit-content;
-}
 
 html, body {
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     max-width: 100% ;
     overflow-x: hidden ;
     margin: 0 auto;
+    align-items: center;
 }
 *{margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+//Desktop
+@media only screen and (min-width:$Desktop){
+    
+    html{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        overflow: visible;
+        
+    }
 
-@media only screen and (min-width:$Mobile) and (max-width:$Desktop){
+    .cards-container{
+        
+        margin: 0;
+        max-width: 35vw;
+        width: 35vw;
+        height: 100vh;
+        justify-self: flex-start;
+        align-self: flex-start;
+        background-image: url("../../images/bg-main-mobile.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        &-front-card{
+            
+            position: relative;
+            transform: translatey(calc($height_background_image - 20%));
+            left: 50%;
+            object-fit: cover;
+            width: max;
+            max-width: 646px;
+            height: 320px;
+            
+
+
+            &-img{
+                
+                width: 100%;
+                height: 100%;
+                
+            }
+
+            &-svg{
+                position: absolute;
+                left: 30px;
+                top: 30px;
+                
+            }
+
+            &-card-number{
+                font-variant: small-caps;
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                text-align: center;
+                color: $White;
+                font-family: $Family;
+                font-weight: bold;
+                font-size: 40px;
+                letter-spacing: 5px;
+                word-spacing: 10px;
+                left: 0px;
+            }
+
+            &-name{
+                font-variant: small-caps;
+                color: $White;
+                position: absolute;
+                top: 80%;
+                left:45px;
+                font-size: 25px;
+            }
+
+            &-month{
+                font-size: 25px;
+                font-variant: small-caps;
+                color: $White;
+                position: absolute;
+                top: 80%;
+                left: 80%;
+                
+            }
+
+
+            
+        }
+        &-back-card{
+            
+
+            position: relative;
+            transform: translatey(calc($height_background_image - 20%));
+            object-fit: cover;
+            width: max;
+            max-width: 646px;
+            margin-top: 40px;
+            left: 60%;
+            
+            height: 320px;
+            &-img{
+                
+                width: 100%;
+                height: 100%;
+                
+            }
+            &-CVC{
+               position: absolute;
+                left:80%;
+                top: 45%;
+                color: $Light_grayish_violet;
+                font-weight: 700;
+                font-size: 27px;
+            }
+        }
+    }
+    
+
+
+
+
+
+
+    
+}
+
+
+
+
+@media only screen and (min-width:$Mobile) and (max-width:calc($Desktop - 1px)){
     
     .cards-container{
         max-width: $width_mobile;

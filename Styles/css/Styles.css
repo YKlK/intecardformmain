@@ -19,20 +19,15 @@
   outline: 1px solid blue;
 }
 
-html {
-  max-width: 1440px;
+html, body {
+  width: fit-content;
   display: flex;
-  height: 100vh;
   flex-wrap: wrap;
   flex-direction: column;
-  align-items: center;
-  width: fit-content;
-}
-
-html, body {
   max-width: 100%;
   overflow-x: hidden;
   margin: 0 auto;
+  align-items: center;
 }
 
 * {
@@ -41,7 +36,97 @@ html, body {
   box-sizing: border-box;
 }
 
-@media only screen and (min-width: 375px) and (max-width: 1440px) {
+@media only screen and (min-width: 1440px) {
+  html {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    overflow: visible;
+  }
+  .cards-container {
+    margin: 0;
+    max-width: 35vw;
+    width: 35vw;
+    height: 100vh;
+    justify-self: flex-start;
+    align-self: flex-start;
+    background-image: url("../../images/bg-main-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .cards-container-front-card {
+    position: relative;
+    transform: translatey(calc(310px - 20%));
+    left: 50%;
+    object-fit: cover;
+    width: max;
+    max-width: 646px;
+    height: 320px;
+  }
+  .cards-container-front-card-img {
+    width: 100%;
+    height: 100%;
+  }
+  .cards-container-front-card-svg {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+  }
+  .cards-container-front-card-card-number {
+    font-variant: small-caps;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: hsl(0deg, 0%, 100%);
+    font-family: "Space Grotesk";
+    font-weight: bold;
+    font-size: 40px;
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    left: 0px;
+  }
+  .cards-container-front-card-name {
+    font-variant: small-caps;
+    color: hsl(0deg, 0%, 100%);
+    position: absolute;
+    top: 80%;
+    left: 45px;
+    font-size: 25px;
+  }
+  .cards-container-front-card-month {
+    font-size: 25px;
+    font-variant: small-caps;
+    color: hsl(0deg, 0%, 100%);
+    position: absolute;
+    top: 80%;
+    left: 80%;
+  }
+  .cards-container-back-card {
+    position: relative;
+    transform: translatey(calc(310px - 20%));
+    object-fit: cover;
+    width: max;
+    max-width: 646px;
+    margin-top: 40px;
+    left: 60%;
+    height: 320px;
+  }
+  .cards-container-back-card-img {
+    width: 100%;
+    height: 100%;
+  }
+  .cards-container-back-card-CVC {
+    position: absolute;
+    left: 80%;
+    top: 45%;
+    color: hsl(270deg, 3%, 87%);
+    font-weight: 700;
+    font-size: 27px;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 1439px) {
   .cards-container {
     max-width: 100vw;
     width: 100vw;
@@ -257,7 +342,7 @@ html, body {
     background-color: hsl(278deg, 40%, 30%);
   }
 }
-@media only screen and (min-width: 375px) and (max-width: 1440px) and (min-width: 680px) {
+@media only screen and (min-width: 375px) and (max-width: 1439px) and (min-width: 680px) {
   .cards-container-back-card {
     left: 22vw;
   }
@@ -265,7 +350,7 @@ html, body {
     left: 13vw;
   }
 }
-@media only screen and (min-width: 375px) and (max-width: 1440px) and (min-width: 860px) {
+@media only screen and (min-width: 375px) and (max-width: 1439px) and (min-width: 860px) {
   .cards-container-back-card {
     left: 25vw;
   }
@@ -273,7 +358,7 @@ html, body {
     left: 18vw;
   }
 }
-@media only screen and (min-width: 375px) and (max-width: 1440px) and (min-width: 1050px) {
+@media only screen and (min-width: 375px) and (max-width: 1439px) and (min-width: 1050px) {
   .cards-container-back-card {
     left: 29vw;
   }
@@ -281,7 +366,7 @@ html, body {
     left: 22vw;
   }
 }
-@media only screen and (min-width: 375px) and (max-width: 1440px) and (min-width: 1350px) {
+@media only screen and (min-width: 375px) and (max-width: 1439px) and (min-width: 1350px) {
   .cards-container-back-card {
     left: 32vw;
   }
@@ -289,7 +374,7 @@ html, body {
     left: 27vw;
   }
 }
-@media only screen and (min-width: 375px) and (max-width: 1440px) {
+@media only screen and (min-width: 375px) and (max-width: 1439px) {
   .hidden {
     display: none;
   }

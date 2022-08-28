@@ -63,7 +63,7 @@ export const Validar_Datos_formulario_final=(event)=>{
 
     }
     else{
-        
+          
         alert("formulario incompleto");
     }
     
