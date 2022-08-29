@@ -218,6 +218,9 @@ html, body {
         flex-wrap: wrap;
         justify-content: center;
         
+        & i{
+            font-size: 30px; 
+        }
         & label{
             cursor: pointer;
             margin: 5px;
@@ -225,7 +228,9 @@ html, body {
         }
 
         &-Name{
+            
             @include inpts(95%);
+            font-size: 30px; 
             height: 80px;
             &::placeholder{
                 font-size: 25px;
@@ -234,6 +239,7 @@ html, body {
         &-Number{
             @include inpts(95%);
             height: 80px;
+            font-size: 30px; 
             &::placeholder{
                 font-size: 25px;
             }
@@ -242,6 +248,7 @@ html, body {
         &-MM{
             @include inpts(10vw);
             height: 80px;
+            font-size: 30px; 
             &::placeholder{
                 font-size: 25px;
             }
@@ -250,6 +257,7 @@ html, body {
             
             @include inpts(10vw);
             height: 80px;
+            font-size: 30px; 
             &::placeholder{
                 font-size: 25px;
             }
@@ -258,6 +266,7 @@ html, body {
           
             @include inpts(17vw);
             height: 80px;
+            font-size: 30px; 
             &::placeholder{
                 font-size: 25px;
             }
@@ -278,18 +287,23 @@ html, body {
     }
 
     .completed{
-        margin-top: 80px;
+        width: 30vw;
+        margin-top: 30vh;
+        margin-left: 11vw;
         display: flex;
         flex-direction: column;
         flex-wrap:wrap;
         justify-content: center;
+        align-items: center;
         height: fit-content;
         align-items: center;
         
         &-thanks{
             margin-top: 20px;
+            text-align: center;
             display: inline-block;
-            font-size: 10vw;
+            font-size: 3vw;
+            
             font-variant: small-caps;
             color: $Very_light_violet;
             font-family: $Family;
@@ -297,7 +311,9 @@ html, body {
         &-add{
             margin-top: 20px;
             display: inline-block;
-            font-size: 5vw;
+            text-align: center;
+            font-size: 1vw;
+
             color: $Dark_grayish_violet;
             font-family: $Family;
         }
@@ -307,7 +323,7 @@ html, body {
             margin-top: 20px;
             margin-bottom: 20px;
             display: inline-block;
-            padding: 20px 25vw;
+            padding: 30px 200px;
             background-color: $Very_dark_violet;
             color: $White;
             font-family: $Family;
