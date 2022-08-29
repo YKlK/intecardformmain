@@ -1,5 +1,9 @@
 // @import url(https://fonts.google.com/specimen/Space+Grotesk);
 @import "./variables.scss";
+
+
+// mixins====================================================
+
 @mixin posicionIcon($right,$top){
     position: absolute;
     right: $right;
@@ -14,21 +18,7 @@
     outline:1px solid $valor;
     
 }
-.divposicion{
-    display: inline-block;
-    position: relative;
-}
-.iconposicion{
-    
-    @include posicionIcon(7%,25px)
-}
 
-.exepcion{
-    @include estadoInput(red)
-}
-.correcto{
-    @include estadoInput(blue)
-}
 @mixin inpts($sizeW,) {
     font-size: 15px;
     width: $sizeW;
@@ -44,9 +34,6 @@
         text-align: center;
     }
 }
-
-
-
 @mixin layout($widthS,$back,$front){
     @media only screen and (min-width: $widthS){
         .cards-container-back-card{
@@ -55,35 +42,63 @@
         .cards-container-front-card{
             left:$front;
         }
-        
     }
 }
 
-html, body {
-    width: fit-content;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    max-width: 100% ;
-    overflow-x: hidden ;
-    margin: 0 auto;
-    align-items: center;
-}
+// mixins====================================================
 *{margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+.divposicion{
+    display: inline-block;
+    position: relative;
+}
+.iconposicion{
+    
+    @include posicionIcon(7%,25px)
+}
+
+.exepcion{
+    @include estadoInput(red)
+}
+.correcto{
+    @include estadoInput(blue)
+}
+
+
+html, body {
+    
+    
+    max-height: 100%;
+    max-width: 100% ;
+    overflow-y: auto;
+    overflow-x: hidden ;
+    margin: 0 auto;
+    
+}
+
 //Desktop
 @media only screen and (min-width:$Desktop){
     
-    html{
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 0;
-        overflow: visible;
+    
+    body{
         
+        display: grid;
+        grid-column: 1/4;
+        grid-template-columns: .3fr 50px 1fr;
+       
+        
+        gap: 0;
+        overflow: hidden;
+        height: 100vh;
+        max-height: 100%;
+        max-width: 100% ;
+        
+        margin: 0 0;
     }
+    
 
     .cards-container{
         
@@ -102,7 +117,7 @@ html, body {
             transform: translatey(calc($height_background_image - 20%));
             left: 50%;
             object-fit: cover;
-            width: max;
+            width: 100%;
             max-width: 646px;
             height: 320px;
             
@@ -189,12 +204,134 @@ html, body {
     }
     
 
+    .form{
+        grid-column: 3/4;
+        width: 45vw;
+        box-sizing: border-box;
+        align-self: center;
+        justify-self: center;
+        margin-top: 80px;
+        padding: 0px 5%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        & label{
+            cursor: pointer;
+            margin: 5px;
+            font-size: 35px;
+        }
+
+        &-Name{
+            @include inpts(95%);
+            height: 80px;
+            &::placeholder{
+                font-size: 25px;
+            }
+        }
+        &-Number{
+            @include inpts(95%);
+            height: 80px;
+            &::placeholder{
+                font-size: 25px;
+            }
+        }
+
+        &-MM{
+            @include inpts(10vw);
+            height: 80px;
+            &::placeholder{
+                font-size: 25px;
+            }
+        }
+        &-YY{
+            
+            @include inpts(10vw);
+            height: 80px;
+            &::placeholder{
+                font-size: 25px;
+            }
+        }
+        &-CVC{
+          
+            @include inpts(17vw);
+            height: 80px;
+            &::placeholder{
+                font-size: 25px;
+            }
+        }
+        .buttonto{
+            cursor: pointer;
+            background-color: $Very_dark_violet;
+            color: white;
+            border-radius: 7px;
+            height: 70px;
+            font-size: large;
+            width: 97%;
+            margin: 20px 0;
+            &:hover{
+                background-color: $Very_light_violet;
+            }
+        }
+    }
+
+    .completed{
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap:wrap;
+        justify-content: center;
+        height: fit-content;
+        align-items: center;
+        
+        &-thanks{
+            margin-top: 20px;
+            display: inline-block;
+            font-size: 10vw;
+            font-variant: small-caps;
+            color: $Very_light_violet;
+            font-family: $Family;
+        }
+        &-add{
+            margin-top: 20px;
+            display: inline-block;
+            font-size: 5vw;
+            color: $Dark_grayish_violet;
+            font-family: $Family;
+        }
+
+        &-button{
+            font-size: 25px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: inline-block;
+            padding: 20px 25vw;
+            background-color: $Very_dark_violet;
+            color: $White;
+            font-family: $Family;
+            border-radius: 10px;
+            &:hover{
+                cursor: pointer;
+                background-color: $Very_light_violet;
+            }
+        }
+
+    }
+
+    .hidden{
+        display: none;
+    }
 
 
+     @include layout(1440px,30% ,20% );
+     @include layout(1838px,35%,25%);
+     @include layout(2250px,40%,30%);
+     @include layout(2425px,45%,35%);
 
+     @include layout(2620px,52%,42%);
 
-
-    
 }
 
 
@@ -312,6 +449,7 @@ html, body {
 
         &-Name{
             @include inpts(90vw);
+           
         }
         &-Number{
             @include inpts(90vw);
@@ -333,6 +471,7 @@ html, body {
     }
 
     .buttonto{
+        margin: 20px 0;
         cursor: pointer;
         background-color: $Very_dark_violet;
         color: white;

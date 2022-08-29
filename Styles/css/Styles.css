@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .divposicion {
   display: inline-block;
   position: relative;
@@ -20,29 +26,24 @@
 }
 
 html, body {
-  width: fit-content;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  max-height: 100%;
   max-width: 100%;
+  overflow-y: auto;
   overflow-x: hidden;
   margin: 0 auto;
-  align-items: center;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 @media only screen and (min-width: 1440px) {
-  html {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  body {
+    display: grid;
+    grid-column: 1/4;
+    grid-template-columns: 0.3fr 50px 1fr;
     gap: 0;
-    overflow: visible;
+    overflow: hidden;
+    height: 100vh;
+    max-height: 100%;
+    max-width: 100%;
+    margin: 0 0;
   }
   .cards-container {
     margin: 0;
@@ -60,7 +61,7 @@ html, body {
     transform: translatey(calc(310px - 20%));
     left: 50%;
     object-fit: cover;
-    width: max;
+    width: 100%;
     max-width: 646px;
     height: 320px;
   }
@@ -124,6 +125,215 @@ html, body {
     color: hsl(270deg, 3%, 87%);
     font-weight: 700;
     font-size: 27px;
+  }
+  .form {
+    grid-column: 3/4;
+    width: 45vw;
+    box-sizing: border-box;
+    align-self: center;
+    justify-self: center;
+    margin-top: 80px;
+    padding: 0px 5%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .form label {
+    cursor: pointer;
+    margin: 5px;
+    font-size: 35px;
+  }
+  .form-Name {
+    font-size: 15px;
+    width: 95%;
+    height: 50px;
+    border-radius: 7px;
+    -moz-appearance: textfield;
+    box-shadow: none;
+    border: 1px solid hsl(270deg, 3%, 87%);
+    margin: 10px 0px;
+    margin-left: 1%;
+    height: 80px;
+  }
+  .form-Name::placeholder {
+    font-size: 15px;
+    text-align: center;
+  }
+  .form-Name::placeholder {
+    font-size: 25px;
+  }
+  .form-Number {
+    font-size: 15px;
+    width: 95%;
+    height: 50px;
+    border-radius: 7px;
+    -moz-appearance: textfield;
+    box-shadow: none;
+    border: 1px solid hsl(270deg, 3%, 87%);
+    margin: 10px 0px;
+    margin-left: 1%;
+    height: 80px;
+  }
+  .form-Number::placeholder {
+    font-size: 15px;
+    text-align: center;
+  }
+  .form-Number::placeholder {
+    font-size: 25px;
+  }
+  .form-MM {
+    font-size: 15px;
+    width: 10vw;
+    height: 50px;
+    border-radius: 7px;
+    -moz-appearance: textfield;
+    box-shadow: none;
+    border: 1px solid hsl(270deg, 3%, 87%);
+    margin: 10px 0px;
+    margin-left: 1%;
+    height: 80px;
+  }
+  .form-MM::placeholder {
+    font-size: 15px;
+    text-align: center;
+  }
+  .form-MM::placeholder {
+    font-size: 25px;
+  }
+  .form-YY {
+    font-size: 15px;
+    width: 10vw;
+    height: 50px;
+    border-radius: 7px;
+    -moz-appearance: textfield;
+    box-shadow: none;
+    border: 1px solid hsl(270deg, 3%, 87%);
+    margin: 10px 0px;
+    margin-left: 1%;
+    height: 80px;
+  }
+  .form-YY::placeholder {
+    font-size: 15px;
+    text-align: center;
+  }
+  .form-YY::placeholder {
+    font-size: 25px;
+  }
+  .form-CVC {
+    font-size: 15px;
+    width: 17vw;
+    height: 50px;
+    border-radius: 7px;
+    -moz-appearance: textfield;
+    box-shadow: none;
+    border: 1px solid hsl(270deg, 3%, 87%);
+    margin: 10px 0px;
+    margin-left: 1%;
+    height: 80px;
+  }
+  .form-CVC::placeholder {
+    font-size: 15px;
+    text-align: center;
+  }
+  .form-CVC::placeholder {
+    font-size: 25px;
+  }
+  .form .buttonto {
+    cursor: pointer;
+    background-color: hsl(278deg, 68%, 11%);
+    color: white;
+    border-radius: 7px;
+    height: 70px;
+    font-size: large;
+    width: 97%;
+    margin: 20px 0;
+  }
+  .form .buttonto:hover {
+    background-color: hsl(278deg, 40%, 30%);
+  }
+  .completed {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: fit-content;
+    align-items: center;
+  }
+  .completed-thanks {
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 10vw;
+    font-variant: small-caps;
+    color: hsl(278deg, 40%, 30%);
+    font-family: "Space Grotesk";
+  }
+  .completed-add {
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 5vw;
+    color: hsl(279deg, 6%, 55%);
+    font-family: "Space Grotesk";
+  }
+  .completed-button {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+    padding: 20px 25vw;
+    background-color: hsl(278deg, 68%, 11%);
+    color: hsl(0deg, 0%, 100%);
+    font-family: "Space Grotesk";
+    border-radius: 10px;
+  }
+  .completed-button:hover {
+    cursor: pointer;
+    background-color: hsl(278deg, 40%, 30%);
+  }
+  .hidden {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1440px) and (min-width: 1440px) {
+  .cards-container-back-card {
+    left: 30%;
+  }
+  .cards-container-front-card {
+    left: 20%;
+  }
+}
+@media only screen and (min-width: 1440px) and (min-width: 1838px) {
+  .cards-container-back-card {
+    left: 35%;
+  }
+  .cards-container-front-card {
+    left: 25%;
+  }
+}
+@media only screen and (min-width: 1440px) and (min-width: 2250px) {
+  .cards-container-back-card {
+    left: 40%;
+  }
+  .cards-container-front-card {
+    left: 30%;
+  }
+}
+@media only screen and (min-width: 1440px) and (min-width: 2425px) {
+  .cards-container-back-card {
+    left: 45%;
+  }
+  .cards-container-front-card {
+    left: 35%;
+  }
+}
+@media only screen and (min-width: 1440px) and (min-width: 2620px) {
+  .cards-container-back-card {
+    left: 52%;
+  }
+  .cards-container-front-card {
+    left: 42%;
   }
 }
 @media only screen and (min-width: 375px) and (max-width: 1439px) {
@@ -292,6 +502,7 @@ html, body {
     text-align: center;
   }
   .buttonto {
+    margin: 20px 0;
     cursor: pointer;
     background-color: hsl(278deg, 68%, 11%);
     color: white;
