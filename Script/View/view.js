@@ -1,7 +1,7 @@
 "use strict"
 import {theForm, card_number, card_name, card_month_year,card_CVC,form_input , Reg ,completed,ultimopaso} from "./variables.js"
  import {validarDato , Validar_Datos_formulario_final,retornar} from "../controller/controller.js"
-
+//experimento
 
 
 form_input.forEach(every=>{
